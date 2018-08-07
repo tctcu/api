@@ -19,14 +19,6 @@ class TestController extends Yaf_Controller_Abstract
         }
     }
 
-    function mailAction(){
-        $mail = new SendMail();
-        $to = "xm0563@qq.com";
-        $subject = "Test mail";
-        $message = "Hello! This is a simple email message.";
-         var_dump( $mail->send($to,$subject,$message));
-        echo "Mail Sent.";die;
-    }
 
     function testAction(){
         echo file_get_contents("https://douban.uieee.com/v2/movie/in_theaters");die;
