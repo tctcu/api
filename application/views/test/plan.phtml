@@ -31,7 +31,7 @@
             <form class="form-inline" role="form" action = "" method = "POST">
                 <div class="form-div" >
                     <label>按每：</label>
-                    <select name="type">
+                    <select name="level">
                         <option value="0" <?php if(!isset($params['level']) || $params['level'] == '0' ){ echo "selected"; } ?>><?php echo '请选择';?></option>
                         <?php foreach($level as $k=>$v){ ?>
                             <option value="<?php echo $k;?>" <?php if(isset($params['level']) && $params['level'] == $k ){ echo "selected"; } ?>><?php echo $v;?></option>
@@ -136,13 +136,14 @@
                 </div>
                 <div class="panel-body">
                     <table class="table table-bordered table-striped">
-                        <tr><td>时间</td><td>星期</td><td>排课时间范围</td><td>课时</td></tr>
+                        <tr><td>时间</td><td>星期</td><td>第几周</td><td>排课时间范围</td><td>课时</td></tr>
                         <?php foreach($show_list as $val){ ?>
                             <tr>
-                                <td><?php echo $val['id'];?></td>
-                                <td><?php echo $val['title'];?></td>
-                                <td><?php echo $val['category'];?></td>
-                                <td><?php echo $val['author'];?></td>
+                                <td><?php echo $val['date'];?></td>
+                                <td><?php echo $val['xq'];?></td>
+                                <td><?php echo $val['week'];?></td>
+                                <td><?php echo $val['plan_time'];?></td>
+                                <td><?php echo $val['once'];?></td>
                             </tr>
                         <?php } ?>
                     </table>

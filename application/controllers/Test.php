@@ -54,26 +54,25 @@ class TestController extends Yaf_Controller_Abstract
                 $flag = 0;//第几周
             }
             $course_times = 0;//总排课几次
+            $show_list = [];
             for ($i = strtotime($plan_start); $i <= strtotime($plan_end); $i += 86400) {
-                echo date("Ymd", $i) . '------' . $flag . '======';
-
+                $plan_time = '';
+                $xq = date("w", $i);
                 if ($level == 5) { //指定具体几号
                     $day = intval(date("d", $i));
                     if ($hope[$day]) {
-                        echo date("Ymd", $i) . ' ' . $hope[$day]['start'] . '-' . date("Ymd", $i) . ' ' . $hope[$day]['end'];
+                        $plan_time = $hope[$day]['start'] . '-' . $hope[$day]['end'];
                         $course_times++;
                     }
                 } elseif ($level == 6) { //指定具体日期
                     foreach ($hope as $key => $val) {
                         if (date("Ymd", $i) == date("Ymd", strtotime($key))) {
-                            echo date("Ymd", $i) . ' ' . $val['start'] . '-' . date("Ymd", $i) . ' ' . $val['end'];
+                            $plan_time =  $val['start'] . '-' . $val['end'];
                             $course_times++;
                         }
                     }
 
                 } else {
-
-                    $xq = date("w", $i);
 
                     if ($xq == $first_week) {
                         $flag++;
@@ -86,13 +85,20 @@ class TestController extends Yaf_Controller_Abstract
                             $week = 0;
                         }
                         if (($flag % $level == $week) && $this_xq == $xq) {
-                            echo date("Ymd", $i) . ' ' . $val['start'] . '-' . date("Ymd", $i) . ' ' . $val['end'];
+                            $plan_time = $val['start'] . '-' . $val['end'];
                             $course_times++;
                         }
                     }
                 }
-                echo "<hr>";
+                $show_list[]=[
+                    'date'=>date("Y-m-d", $i),
+                    'xq'=>$xq,
+                    'week'=>$flag,
+                    'plan_time'=>$plan_time,
+                    'once'=>$once
+                ];
             }
+            $this->_view->show_list = $show_list;
             $this->_view->course_times = $course_times;
             $this->_view->course_hour = $once*$course_times;
         }
