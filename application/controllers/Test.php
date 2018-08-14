@@ -26,82 +26,16 @@ class TestController extends Yaf_Controller_Abstract
     }
 
     public function planAction(){
-        if($this->getRequest()->isPost()) {
-            $subjectId = 1;
-            $courseName = '3';
-            $courseVersion = '1';
-            $level = $_REQUEST['level'];// 1-周 2-2周 3-3周  5-月 6-日
-            $times = $_REQUEST['times'];//count($hope) 个数比对即可
-            $once = $_REQUEST['once'];//0.5 0.75 1 1.5 2 ....
-            $plan_start = $_REQUEST['start_plan'];
-            $plan_end = $_REQUEST['end_plan'];
 
-            $hope['1'] = [//第一周的周一
-                'start' => '18:00:00',
-                'end' => '20:00:00'
-            ];
+        $once_course = [
+            '45'=>'0.75',
+            '60'=>'1',
+            '90'=>'1.5',
+            '120'=>'2',
+            '180'=>'3',
 
-            $hope['11'] = [//第二周的周四
-                'start' => '19:00:00',
-                'end' => '21:00:00'
-            ];
+        ];
 
-            $first_xq = date("w", strtotime($plan_start));//排课开始第一天是周几
-            $first_week = 1; //以周几为周的第一天 1-周一 0-周日
-
-            $flag = 1;//第几周
-            if ($first_xq == $first_week) {
-                $flag = 0;//第几周
-            }
-            $course_times = 0;//总排课几次
-            $show_list = [];
-            for ($i = strtotime($plan_start); $i <= strtotime($plan_end); $i += 86400) {
-                $plan_time = '';
-                $xq = date("w", $i);
-                if ($level == 5) { //指定具体几号
-                    $day = intval(date("d", $i));
-                    if ($hope[$day]) {
-                        $plan_time = $hope[$day]['start'] . '-' . $hope[$day]['end'];
-                        $course_times++;
-                    }
-                } elseif ($level == 6) { //指定具体日期
-                    foreach ($hope as $key => $val) {
-                        if (date("Ymd", $i) == date("Ymd", strtotime($key))) {
-                            $plan_time =  $val['start'] . '-' . $val['end'];
-                            $course_times++;
-                        }
-                    }
-
-                } else {
-
-                    if ($xq == $first_week) {
-                        $flag++;
-                    }
-
-                    foreach ($hope as $key => $val) {
-                        $this_xq = $key % 7;//周几
-                        $week = ceil($key / 7);//第几周
-                        if ($week == $level) {
-                            $week = 0;
-                        }
-                        if (($flag % $level == $week) && $this_xq == $xq) {
-                            $plan_time = $val['start'] . '-' . $val['end'];
-                            $course_times++;
-                        }
-                    }
-                }
-                $show_list[]=[
-                    'date'=>date("Y-m-d", $i),
-                    'xq'=>$xq,
-                    'week'=>$flag,
-                    'plan_time'=>$plan_time,
-                    'once'=>$once
-                ];
-            }
-            $this->_view->show_list = $show_list;
-            $this->_view->course_times = $course_times;
-            $this->_view->course_hour = $once*$course_times;
-        }
         $level = [
             1 => '周',
             2 => '二周',
@@ -109,7 +43,7 @@ class TestController extends Yaf_Controller_Abstract
             5 => '月',
             6 => '天',
         ];
-        $hope = [
+        $level_info = [
             1=>[
                 '1'=>'周一',
                 '2'=>'周二',
@@ -193,20 +127,256 @@ class TestController extends Yaf_Controller_Abstract
             ]
         ];
 
-        $once = [
-            '0.5'=>'0.5',
-            '0.75'=>'0.75',
-            '1'=>'1',
-            '1.5'=>'1.5',
-            '2'=>'2',
-            '3'=>'3',
+        if($this->getRequest()->isPost()) {
+            $subjectId = 1;
+            $courseName = '3';
+            $courseVersion = '1';
+            $level = $_REQUEST['level'];// 1-周 2-2周 3-3周  5-月 6-日
+            $times = $_REQUEST['times'];// 频次
+            $once = $_REQUEST['once'];// 45 60 90 120 ....
+            $plan_start = $_REQUEST['start_plan'];
+            $plan_end = $_REQUEST['end_plan'];
 
-        ];
-        $this->_view->hope = $hope;
+            $hope['1'] = [//第一周的周一
+                [
+                    'start_time' => '18:00:00',
+                    'end_time' => '19:00:00'
+                ],
+                [
+                    'start_time' => '19:00:00',
+                    'end_time' => '20:00:00'
+                ]
+            ];
+
+            $hope['11'] = [//第二周的周四
+                [
+                    'start_time' => '18:00:00',
+                    'end_time' => '19:00:00'
+                ],
+                [
+                    'start_time' => '19:00:00',
+                    'end_time' => '20:00:00'
+                ]
+            ];
+
+            $message = $this->checkTime($hope, $once_course, $once,$times);
+            if (!$message) {
+                echo $message;
+                die;
+            }
+
+            //根据条件换合理时间(有序)
+            $time_list = $this->getTimeList($plan_start,$plan_end,$level,$hope);
+
+            //关联合同算课时
+            $contract_type = 'pt';//普通合同
+            $course_hour = $this->countCourseHour($contract_type,$time_list,$once);
+
+
+            $this->_view->show_list = $time_list;
+            $this->_view->course_times = count($time_list);//总排课几次
+            $this->_view->course_hour = $course_hour;
+            $this->_view->params = $_REQUEST;
+        }
+
+
+        $this->_view->hope = $level_info;
         $this->_view->level = $level;
         $this->_view->once = $once;
+    }
 
 
+    #计算课时
+    function countCourseHour($contract_type,$time_list,$once){
+
+        $copy_contract = $pt_contract = $this->getContract($contract_type);
+        $total_used_course_hour = 0;
+
+        foreach($time_list as $val){
+            if($once){//指定单次时长
+                $this_minute = $once;
+            }else{
+                $this_minute =  (strtotime($val['end'])-strtotime($val['start']))/60;
+            }
+
+            foreach($pt_contract as $k=>$v){
+                if(($pt_contract[$k]['ks']*$pt_contract[$k]['type'])-$copy_contract[$k]['used'] >= $this_minute){
+                    $copy_contract[$k]['used'] += $this_minute;
+                    $used_course_hour = floor(($this_minute/$v['type'])*100)/100;//保留2位舍去
+                    $copy_contract[$k]['ks'] = $copy_contract[$k]['ks']-$used_course_hour;
+                    $total_used_course_hour += $used_course_hour;//总消耗课时
+                    break;
+                }
+            }
+        }
+        return $total_used_course_hour;
+    }
+
+    #获取合同课时相关
+    function getContract($contract_type){
+        //普通合同
+        $pt_ht = [
+            [
+                'ks'=>'100',//合同剩余课时
+                'type'=>'45',//合同类型 单课时分钟数
+            ],
+            [
+                'ks'=>'200',
+                'type'=>'60',
+            ]
+        ];
+        //五星合同
+        $wx_ht = [
+            [
+                'ks'=>'10',
+                'type'=>'45',
+            ],
+            [
+                'ks'=>'20',
+                'type'=>'60',
+            ]
+        ];
+        return $contract_type == 'wx' ? $wx_ht : $pt_ht;
+    }
+
+
+    #获取排课时间
+    function getTimeList($plan_start,$plan_end,$level,$hope)
+    {
+        $plan_first_weekday = date("w", strtotime($plan_start));//排课开始第一天是周几
+        $week_first_day = 1; //以周几为周的第一天 1-周一 0-周日
+
+        $week_count = 1;//第几周
+        if ($plan_first_weekday == $week_first_day) {
+            $week_count = 0;//第几周
+        }
+
+        $time_list = [];
+
+        //循环首位时间处理
+        $s_data = strtotime(date('Y-m-d', strtotime($plan_start)));
+        $e_data = strtotime(date('Y-m-d', strtotime($plan_end)));
+
+        for ($i = $s_data; $i <= $e_data; $i += 86400) {
+            $w = date("w", $i);
+            if ($level == 5) { //指定具体几号
+                $d = intval(date("d", $i));
+                if ($hope[$d]) {
+                    foreach ($hope[$d] as $v) {
+                        $time_list[] = $this->getTime($i, $v['start'], $v['end']);
+                    }
+                }
+            } elseif ($level == 7) { //指定具体日期  可能用不上
+                foreach ($hope as $key => $val) {
+                    if (date("Ymd", $i) == date("Ymd", strtotime($key))) {
+                        foreach ($val as $v) {
+                            $time_list[] = $this->getTime($i, $v['start'], $v['end']);
+                        }
+                    }
+                }
+            } elseif ($level == 6) { //按天 (数组的一维下标为0)
+                foreach ($hope[0] as $v) {
+                    $time_list[] = $this->getTime($i, $v['start'], $v['end']);
+                }
+            } else {
+
+                if ($w == $week_first_day) {
+                    $week_count++;
+                }
+
+                foreach ($hope as $key => $val) {
+                    $this_weekday = $key % 7;//周几
+                    $this_week = ceil($key / 7);//第几周
+                    if ($this_week == $level) {
+                        $this_week = 0;
+                    }
+                    if (($week_count % $level == $this_week) && $this_weekday == $w) {
+                        foreach ($val as $v) {
+                            $time_list[] = $this->getTime($i, $v['start'], $v['end']);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        return $time_list;
+    }
+
+
+    #判断时间是否合理
+    function checkTime($data,$once_course,$once='',$times=''){
+        $count_times = 0;//统计频次
+        foreach($data as $val){
+            foreach($val as $v){
+                $start_time = strtotime($v['start_time']);
+                $end_time = strtotime($v['end_time']);
+                if($start_time > $end_time){//跨天
+                    $end_time += 86400;
+                }
+                $this_minute = ($end_time-$start_time)/60;
+                if($once){
+                    if($this_minute < $once){
+                        return '这节排课时间不够';
+                    }
+                } else {
+                    if(!in_array($this_minute,array_keys($once_course))){
+                        return '这节排课时间不合理';
+                    }
+                }
+                $count_times++;
+            }
+        }
+        if($times && $count_times < $times){
+            return '排课频次不合理';
+        }
+        return false;
+    }
+
+    #拼接具体排课时间包含跨天处理
+    function getTime($i,$start,$end){
+        $start = date('Y-m-d',$i).$start;
+        $end = date('Y-m-d',$i).$end;
+        if(strtotime($start) > strtotime($end)){//跨天
+            $end = date('Y-m-d',$i+86400).$end;
+        }
+        return [
+            'start_time' => $start,
+            'end_time' => $end
+        ];
+    }
+
+
+
+
+
+
+
+
+    
+
+    function tAction(){
+        $plan_start = '2018-07-09 16:00:01';
+        $plan_end = '2018-10-09 01:00:01';
+
+        $s_data = date('Y-m-d',strtotime($plan_start));
+        //$s_time = date('H:i:s',strtotime($plan_start));
+
+        $e_data = date('Y-m-d',strtotime($plan_end));
+        //$e_time = date('H:i:s',strtotime($plan_end));
+        $start = '15:00:01';
+        $end = '03:00:01';
+        $s_time = strtotime($s_data);
+        $e_time = strtotime($e_data);
+        if(strtotime($plan_start) > strtotime($s_data.' '.$start) ){
+            $s_time += 86400;
+        }
+        if(strtotime($e_data.' '.$end) > strtotime($plan_end)){
+            $e_time += 86400;
+        }
+
+        echo date("Y-m-d H:i:s",$s_time).'<hr>';
+        echo date("Y-m-d H:i:s",$e_time);die;
     }
 
 
