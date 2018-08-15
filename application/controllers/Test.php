@@ -27,6 +27,12 @@ class TestController extends Yaf_Controller_Abstract
 
     public function planAction(){
 
+        $contract_type = [
+            '1'=>'普通合同',
+            '2'=>'五星合同',
+        ];
+
+
         $once_course = [
             '45'=>'0.75',
             '60'=>'1',
@@ -131,11 +137,11 @@ class TestController extends Yaf_Controller_Abstract
             $subjectId = 1;
             $courseName = '3';
             $courseVersion = '1';
-            $level = $_REQUEST['level'];// 1-周 2-2周 3-3周  5-月 6-日
-            $times = $_REQUEST['times'];// 频次
-            $once = $_REQUEST['once'];// 45 60 90 120 ....
-            $plan_start = $_REQUEST['start_plan'];
-            $plan_end = $_REQUEST['end_plan'];
+            $level = 2;// 1-周 2-2周 3-3周  5-月 6-日
+            $times = 4;// 频次
+            $once = 60;// 45 60 90 120 ....
+            $plan_start = '2018-09-01';
+            $plan_end = '2018-12-01';
 
             $hope['1'] = [//第一周的周一
                 [
@@ -159,19 +165,19 @@ class TestController extends Yaf_Controller_Abstract
                 ]
             ];
 
-            $message = $this->checkTime($hope, $once_course, $once,$times);
-            if (!$message) {
+            $message = $this->checkTime($hope, $once_course, $once, 1, $times);
+            if ($message) {
                 echo $message;
                 die;
             }
+
 
             //根据条件换合理时间(有序)
             $time_list = $this->getTimeList($plan_start,$plan_end,$level,$hope);
 
             //关联合同算课时
             $contract_type = 'pt';//普通合同
-            $course_hour = $this->countCourseHour($contract_type,$time_list,$once);
-
+            $course_hour = $this->countCourseHour($contract_type,$time_list);
 
             $this->_view->show_list = $time_list;
             $this->_view->course_times = count($time_list);//总排课几次
@@ -179,34 +185,37 @@ class TestController extends Yaf_Controller_Abstract
             $this->_view->params = $_REQUEST;
         }
 
-
         $this->_view->hope = $level_info;
         $this->_view->level = $level;
-        $this->_view->once = $once;
+        $this->_view->once = $once_course;
     }
 
 
     #计算课时
-    function countCourseHour($contract_type,$time_list,$once){
+    function countCourseHour($contract_type,$time_list,$once=''){
 
         $copy_contract = $pt_contract = $this->getContract($contract_type);
         $total_used_course_hour = 0;
 
+        $contract_num = count($pt_contract);
         foreach($time_list as $val){
-            if($once){//指定单次时长
+            if($once){//指定单次时长 这种情况被产品否决了 因为规定好每次时间还是根据具体差值来排
                 $this_minute = $once;
             }else{
-                $this_minute =  (strtotime($val['end'])-strtotime($val['start']))/60;
+                $this_minute = (strtotime($val['end_time']) - strtotime($val['start_time'])) / 60;
             }
 
             foreach($pt_contract as $k=>$v){
-                if(($pt_contract[$k]['ks']*$pt_contract[$k]['type'])-$copy_contract[$k]['used'] >= $this_minute){
+                if(($pt_contract[$k]['ks'] * $pt_contract[$k]['type']) - $copy_contract[$k]['used'] >= $this_minute){
                     $copy_contract[$k]['used'] += $this_minute;
                     $used_course_hour = floor(($this_minute/$v['type'])*100)/100;//保留2位舍去
                     $copy_contract[$k]['ks'] = $copy_contract[$k]['ks']-$used_course_hour;
                     $total_used_course_hour += $used_course_hour;//总消耗课时
                     break;
+                }elseif($contract_num == $k+1){ //最后一份合同
+                    return '合同总课时不够';
                 }
+
             }
         }
         return $total_used_course_hour;
@@ -217,11 +226,11 @@ class TestController extends Yaf_Controller_Abstract
         //普通合同
         $pt_ht = [
             [
-                'ks'=>'100',//合同剩余课时
+                'ks'=>'10',//合同剩余课时
                 'type'=>'45',//合同类型 单课时分钟数
             ],
             [
-                'ks'=>'200',
+                'ks'=>'18',
                 'type'=>'60',
             ]
         ];
@@ -263,20 +272,20 @@ class TestController extends Yaf_Controller_Abstract
                 $d = intval(date("d", $i));
                 if ($hope[$d]) {
                     foreach ($hope[$d] as $v) {
-                        $time_list[] = $this->getTime($i, $v['start'], $v['end']);
+                        $time_list[] = $this->getTime($i, $v['start_time'], $v['end_time']);
                     }
                 }
             } elseif ($level == 7) { //指定具体日期  可能用不上
                 foreach ($hope as $key => $val) {
                     if (date("Ymd", $i) == date("Ymd", strtotime($key))) {
                         foreach ($val as $v) {
-                            $time_list[] = $this->getTime($i, $v['start'], $v['end']);
+                            $time_list[] = $this->getTime($i, $v['start_time'], $v['end_time']);
                         }
                     }
                 }
             } elseif ($level == 6) { //按天 (数组的一维下标为0)
                 foreach ($hope[0] as $v) {
-                    $time_list[] = $this->getTime($i, $v['start'], $v['end']);
+                    $time_list[] = $this->getTime($i, $v['start_time'], $v['end_time']);
                 }
             } else {
 
@@ -292,7 +301,7 @@ class TestController extends Yaf_Controller_Abstract
                     }
                     if (($week_count % $level == $this_week) && $this_weekday == $w) {
                         foreach ($val as $v) {
-                            $time_list[] = $this->getTime($i, $v['start'], $v['end']);
+                            $time_list[] = $this->getTime($i, $v['start_time'], $v['end_time']);
                         }
                     }
                 }
@@ -304,8 +313,9 @@ class TestController extends Yaf_Controller_Abstract
     }
 
 
-    #判断时间是否合理
-    function checkTime($data,$once_course,$once='',$times=''){
+
+    #判断时间是否合理 $times_type 0-不检查 1-强排课频次检查 2-弱频次检查
+    function checkTime($data,$once_course,$once='',$times_type='',$times =''){
         $count_times = 0;//统计频次
         foreach($data as $val){
             foreach($val as $v){
@@ -315,34 +325,35 @@ class TestController extends Yaf_Controller_Abstract
                     $end_time += 86400;
                 }
                 $this_minute = ($end_time-$start_time)/60;
-                if($once){
-                    if($this_minute < $once){
-                        return '这节排课时间不够';
-                    }
-                } else {
-                    if(!in_array($this_minute,array_keys($once_course))){
-                        return '这节排课时间不合理';
-                    }
+                if($once && $this_minute < $once){
+                    return '这节排课时间不够';
                 }
+                if(!in_array($this_minute,array_keys($once_course))){
+                    return '这节排课时间不合理';
+                }
+
                 $count_times++;
             }
         }
-        if($times && $count_times < $times){
-            return '排课频次不合理';
+        if($times_type==1 && $count_times <> $times){//排课频次(总次数)强检测
+            return '排课频次(总次数)与可排课时间不一致';
+        }
+        if($times_type==2 && $count_times < $times){//排课频次(总次数)弱检测
+            return '设定了频次(总次数),可选排课时间不够';
         }
         return false;
     }
 
     #拼接具体排课时间包含跨天处理
-    function getTime($i,$start,$end){
-        $start = date('Y-m-d',$i).$start;
-        $end = date('Y-m-d',$i).$end;
+    function getTime($i,$start_time,$end_time){
+        $start = date('Y-m-d',$i).' '.$start_time;
+        $end = date('Y-m-d',$i).' '.$end_time;
         if(strtotime($start) > strtotime($end)){//跨天
-            $end = date('Y-m-d',$i+86400).$end;
+            $end = date('Y-m-d',$i+86400).' '.$end;
         }
         return [
             'start_time' => $start,
-            'end_time' => $end
+            'end_time' => $end,
         ];
     }
 
@@ -353,7 +364,7 @@ class TestController extends Yaf_Controller_Abstract
 
 
 
-    
+
 
     function tAction(){
         $plan_start = '2018-07-09 16:00:01';
