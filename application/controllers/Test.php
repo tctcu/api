@@ -390,6 +390,10 @@ class TestController extends Yaf_Controller_Abstract
         echo date("Y-m-d H:i:s",$e_time);die;
     }
 
+    function aAction(){
+        echo '测试';die;
+    }
+
 
     private function log($content='') {
         $fp = fopen('/tmp/test_book.log','a');
