@@ -391,7 +391,24 @@ class TestController extends Yaf_Controller_Abstract
     }
 
     function aAction(){
-        echo '测试';die;
+        $request_url = 'http://v2.api.haodanku.com/ratesurl';
+        //$request_url = 'http://v2.api.haodanku.com/super_classify/apikey/allfree';
+        $request_data = array();
+        $request_data['apikey'] = 'allfree';
+        $request_data['itemid'] = '548696006912';
+        $request_data['pid'] = 'mm_116356778_18618211_65740777';
+        $request_data['activityid'] = 'efd9a2f69fef49949fd34b3c24b27972';
+
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL,$request_url);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($ch, CURLOPT_TIMEOUT,10);
+        curl_setopt($ch,CURLOPT_POST,1);
+        curl_setopt($ch,CURLOPT_POSTFIELDS,$request_data);
+        $res = curl_exec($ch);
+        curl_close($ch);
+        echo '<pre>';
+        print_r($res);die;
     }
 
 
