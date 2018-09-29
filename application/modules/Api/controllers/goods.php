@@ -11,13 +11,40 @@ class GoodsController extends ApiController
     #列表
     function listAction()
     {
-        echo '哈哈哈';die;
-
+        $url = "http://v2.api.haodanku.com/itemlist/apikey/allfree/nav/3/cid/0/back/10/min_id/1";
+        $json = file_get_contents($url);
+        //var_dump($json);die;
+        $ret_data = json_decode($json,true)['data'];
+        $data = array();
+        foreach($ret_data as $val){
+            $data[] = array(
+                'itemid' => $val['itemid'],
+                'itemshorttitle' => $val['itemshorttitle'],
+                'itemdesc' => $val['itemdesc'],
+                'itemprice' => $val['itemprice'],
+                'itemsale' => $val['itemsale'],
+                'itempic' => $val['itempic'],
+                'itemendprice' => $val['itemendprice'],
+                'url' => 'http://uland.taobao.com/coupon/edetail?activityId='.$val['activityid'].'&itemId='.$val['itemid'].'&src=qmmf_sqrb&mt=1&pid=mm_116356778_18618211_65740777',
+                'couponmoney' => $val['couponmoney'],
+                'couponexplain' => $val['couponexplain'],
+                'couponstarttime' => $val['couponstarttime'],
+                'couponendtime' => $val['couponendtime'],
+//                'taobao_image' => explode(',' ,$val['taobao_image']),
+            );
+        }
+        $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $data);
     }
 
     #详情
     function detailAction()
     {
+        $itemid = intval($_REQUEST['itemid']);
+        $url = "http://v2.api.haodanku.com/item_detail/apikey/allfree/itemid/".$itemid;
+        $json = file_get_contents($url);
+        $ret_data = json_decode($json,true)['data'];
+        $ret_data['taobao_image'] = explode(',' ,$ret_data['taobao_image']);
 
+        $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
     }
 }
