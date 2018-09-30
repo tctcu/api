@@ -11,9 +11,11 @@ class GoodsController extends ApiController
     #列表
     function listAction()
     {
+        $sort = intval($_REQUEST['sort']) ? intval($_REQUEST['sort']) : 0;
+        $cid = intval($_REQUEST['cid']) ? intval($_REQUEST['cid']) : 0;
         $min_id = intval($_REQUEST['min_id']) ? intval($_REQUEST['min_id']) : 1;
         $pageSize = intval($_REQUEST['pageSize']) ? intval($_REQUEST['pageSize']) : 20;
-        $url = "http://v2.api.haodanku.com/itemlist/apikey/allfree/nav/3/cid/0/back/".$pageSize."/min_id/".$min_id;
+        $url = "http://v2.api.haodanku.com/itemlist/apikey/allfree/nav/3/cid/".$cid."/back/".$pageSize."/min_id/".$min_id."/sort/".$sort;
         $json = file_get_contents($url);
         //var_dump($json);die;
         $ret_data = json_decode($json,true);
