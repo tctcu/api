@@ -11,13 +11,17 @@ class GoodsController extends ApiController
     #列表
     function listAction()
     {
-        $url = "http://v2.api.haodanku.com/itemlist/apikey/allfree/nav/3/cid/0/back/10/min_id/1";
+        $min_id = intval($_REQUEST['min_id']) ? intval($_REQUEST['min_id']) : 1;
+        $pageSize = intval($_REQUEST['pageSize']) ? intval($_REQUEST['pageSize']) : 20;
+        $url = "http://v2.api.haodanku.com/itemlist/apikey/allfree/nav/3/cid/0/back/".$pageSize."/min_id/".$min_id;
         $json = file_get_contents($url);
         //var_dump($json);die;
-        $ret_data = json_decode($json,true)['data'];
-        $data = array();
-        foreach($ret_data as $val){
-            $data[] = array(
+        $ret_data = json_decode($json,true);
+        $data = array(
+            'min_id' => $ret_data['min_id']
+        );
+        foreach($ret_data['data'] as $val){
+            $data['list'][] = array(
                 'itemid' => $val['itemid'],
                 'itemshorttitle' => $val['itemshorttitle'],
                 'itemdesc' => $val['itemdesc'],
@@ -66,15 +70,16 @@ class GoodsController extends ApiController
         $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
     }
 
+    #关键词搜索
     function searchAction(){
         $cid = intval($_REQUEST['cid']);
         $keyword = trim($_REQUEST['keyword']);
-        $url = "http://v2.api.haodanku.com/get_keyword_items/apikey/allfree/keyword/".urlencode(urlencode($keyword))."/back/10/sort/0/cid/".$cid;
+        $url = "http://v2.api.haodanku.com/get_keyword_items/apikey/allfree/keyword/".urlencode(urlencode($keyword))."/back/50/sort/0/cid/".$cid;
         $json = file_get_contents($url);
-        $ret_data = json_decode($json,true)['data'];
+        $ret_data = json_decode($json,true);
         $data = array();
-        foreach($ret_data as $val){
-            $data[] = array(
+        foreach($ret_data['data'] as $val){
+            $data['list'][] = array(
                 'itemid' => $val['itemid'],
                 'itemshorttitle' => $val['itemshorttitle'],
                 'itemdesc' => $val['itemdesc'],
