@@ -2,8 +2,360 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90ef64e3-bb65-413e-9a09-c01839eb4f8b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitgnore" afterPath="$PROJECT_DIR$/.gitgnore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/api.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/AliyunPush.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/Autoloader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/QimenCloud/QimenCloudClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/TopSdk.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/aliyun/AliyunClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/dingtalk/DingTalkClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/fileTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/ApplicationVar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/ClusterTopClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/HttpdnsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/RequestCheckUtil.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/ResultSet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/SpiUtils.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/TopClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/TopLogger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ApiResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Area.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/BmcResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/BmcResultVoid.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Carriage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/CheckVerCodeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Condition.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/CustMsg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/DeliveryInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/DeliveryTime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/DescFragment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/DescInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/DescModuleInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/DetailPrice.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/DetailPriceInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/EsMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/EsMessageResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Extend.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Feature.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/FoodSecurity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ImMsg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/IsvItemSubDo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Item.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemBuyInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemCat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemCategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemDetailData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemImg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemMateriaValueDO.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemMaterialProp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemProp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemProperty.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemSearch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemTaoSirElDO.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemTaosirDO.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ItemVideo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Items.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Json.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/KfcSearchResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/LocalityLife.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Location.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/MessageItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/MobileDescInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/MpicVideo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/MsgGroupDO.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/NTbkItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/NTbkShop.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/OpenAccount.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/OpenAccountResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/OpenAccountSearchResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/OpenAccountTokenApplyResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/OpenAccountTokenValidateResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/OpenImUser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/OpenaccountLong.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/OpenaccountObject.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/OpenaccountVoid.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/PaginationResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/PaimaiInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/PriceUnit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ProcessResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Product.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ProductExtraInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ProductImg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ProductPropImg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/PropImg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/PropValue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/PvMapSku.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/RateInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/RateItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/RemoveDelayMessageRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ResultData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ResultMeta.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Results.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/RetailStore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/RetailStoreInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/RoamingMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/RoamingMessageItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/RoamingMessageResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SellerCat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SellerInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SemanticResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SendMessageRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SendMessageResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SendVerCodeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Shipping.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ShippingAddress.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Shop.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ShopCouponInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/ShopScore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SimResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Sku.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SkuInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SkuPriceItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SkuProperty.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SkuPropertyValue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/SkuQuantity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/StockInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Subtask.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Task.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TbkCoupon.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TbkEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TbkFavorites.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TbkSpread.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TbkSpreadRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Text.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TextMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Texts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TmcGroup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TmcMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TmcProduceResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TmcPublishMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TmcQueueInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TmcUser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TokenInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TokenInfoExt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TopDownloadRecordDo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TopItemQuery.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Trackparams.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Tracks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Tracksummary.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TradeConfirmFee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TribeInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TribeMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TribeMessageResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TribeMsg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TribeTextMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/TribeUser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/UatmTbkItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/UploadTokenRequestV.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/User.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/UserCredit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Userinfos.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/Video.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/WordResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/XItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/domain/XLocation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/AlibabaBaichuanAppRecommendRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/AlibabaBaichuanAppcontentUploadRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/AlibabaBaichuanAppeventBatchuploadRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/AlibabaBaichuanAppeventUploadRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/AlibabaOrpRecommendRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/AlipayXiaodaiUserPermitRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/AppipGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/AreasGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanItemSubscribeDailyLeftQueryRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanItemSubscribeRelationQueryRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanItemSubscribeRelationsQueryRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanItemSubscribeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanItemUnsubscribeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanItemsSubscribeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanItemsUnsubscribeByConditionRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanItemsUnsubscribeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanMessageSendMessageRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanMessageSendNotificationRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountLoginRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountLoginbytokenRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountLogindoublecheckRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountNewlogindoublecheckRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountPasswordResetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountRegisterRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountRegistercodeCheckRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountRegistercodeSendRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountResetcodeCheckRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOpenaccountResetcodeSendRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanOrderurlGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanPayresultQueryRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanTaokeTraceRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanUserLoginRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanUserLoginbytokenRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/BaichuanUserLogindoublecheckRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/CloudpushMessageAndroidRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/CloudpushMessageIosRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/CloudpushNoticeAndroidRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/CloudpushNoticeIosRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/CloudpushPushRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/DeliverySendRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/FilesGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/HttpdnsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemAddRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemDetailGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemImgDeleteRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemImgUploadRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemItemvideosGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemJointImgRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemJointPropimgRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemSkusGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemUpdateDelistingRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemUpdateListingRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemUpdateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemcatsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItempropsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItempropvaluesGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ItemsSearchRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/JuItemsSearchRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/JushitaJmsGroupDeleteRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/JushitaJmsGroupGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/KfcKeywordSearchRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/MediaCategoryUpdateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/MtopUploadTokenGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/NlpFeedbackRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/NlpPreprocessRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/NlpSemanticTextsAnalyzeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/NlpSimilarityRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/NlpWordRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OauthCodeCreateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenAccountCreateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenAccountDeleteRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenAccountIndexFindRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenAccountListRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenAccountSearchRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenAccountTokenApplyRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenAccountTokenValidateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenAccountUpdateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenSmsBatchsendmsgRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenSmsCheckvercodeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenSmsRmdelaymsgRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenSmsSendmsgRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenSmsSendvercodeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimAppChatlogsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimChatlogsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimChatlogsImportRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimCustmsgPushRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimImmsgPushRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimIoscertProductionSetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimIoscertSandboxSetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimRelationsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimSnfilterwordSetfilterRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTrackGetdetailsRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTrackGetsummaryRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeCreateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeDismissRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeExpelRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeGetalltribesRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeGetmembersRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeGettribeinfoRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeInviteRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeJoinRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeModifytribeinfoRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeQuitRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeSendmsgRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeSetmanagerRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeSetmembernickRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribeUnsetmanagerRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribelogsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimTribelogsImportRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimUsersAddRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimUsersDeleteRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimUsersGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimUsersUpdateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenimUserserviceGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenuidChangeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenuidGetBymixnickRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenuidGetBytradeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/OpenuidGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ProductAddRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ProductGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ProductImgUploadRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ProductPropimgUploadRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ProductUpdateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ProductsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ProductsSearchRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/SellercatsListGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ShippingAddressesGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/ShopGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TaeExistShopCouponGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TaeItemDetailGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TaeItemsListRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkCouponGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkDgItemCouponGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkDgMaterialOptionalRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkDgNewuserOrderGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkDgNewuserOrderSumRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkItemGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkItemInfoGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkItemRecommendGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkJuTqgGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkScMaterialOptionalRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkScNewuserOrderGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkScNewuserOrderSumRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkShopGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkShopRecommendGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkSpreadGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkTpwdCreateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkUatmEventGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkUatmEventItemGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkUatmFavoritesGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TbkUatmFavoritesItemGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TimeGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TisQueryRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcAuthGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcGroupAddRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcGroupDeleteRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcGroupsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcMessageProduceRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcMessagesConfirmRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcMessagesConsumeRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcMessagesProduceRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcMsgSendrecordRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcQueueGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcUserCancelRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcUserGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcUserPermitRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TmcUserTopicsGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TopAuthTokenCreateRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TopAuthTokenRefreshRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TopIpoutGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TopSdkFeedbackUploadRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TopSecretGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TopSecretRegisterRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TopatsResultGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TopatsTaskDeleteRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/TradeConfirmfeeGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/UserGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/UsersGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/WangwangClientidBindRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/request/WangwangClientidUnbindRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/MagicCrypt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/SecretContext.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/SecretCounterUtil.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/SecretGetRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/SecurityClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/SecurityTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/SecurityUtil.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/TopSdkFeedbackUploadRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/YacCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/library/taobao-sdk/top/security/iCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/Taobao.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/Api/controllers/goods.php" afterPath="$PROJECT_DIR$/application/modules/Api/controllers/goods.php" />
     </list>
     <ignored path="api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,57 +371,24 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="api" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Web.php">
+      <file leaf-file-name="Goods.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/modules/Api/controllers/Goods.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.387096">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.419354">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitgnore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitgnore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.55316865">
+              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -88,6 +407,7 @@
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="&lt;121ffe92-edb9-47db-bc34-9acf258d3dfd&gt;/public/index.php" />
         <option value="$PROJECT_DIR$/.gitgnore" />
+        <option value="$PROJECT_DIR$/application/modules/Api/controllers/Goods.php" />
       </list>
     </option>
   </component>
@@ -98,7 +418,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1920" />
+    <option name="x" value="1440" />
+    <option name="y" value="-95" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
@@ -115,7 +436,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -128,6 +449,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -156,7 +478,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -171,6 +493,72 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -194,7 +582,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,6 +593,12 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/library" />
+      <recent name="$PROJECT_DIR$/application/models" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -223,6 +616,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -243,28 +641,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="1440" y="-95" width="1920" height="1080" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2529412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2593583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997987" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997987" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -277,8 +675,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/application/controllers/Web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.387096">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -291,14 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.027926961">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -307,18 +705,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitgnore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.027926961">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3018242">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.419354">
+        <state vertical-scroll-proportion="0.02783726">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2783726">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -327,6 +747,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4189044">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.53061223">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Taobao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69280344">
+          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/Api/controllers/Goods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55316865">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding />
         </state>
       </provider>

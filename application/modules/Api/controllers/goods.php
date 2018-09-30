@@ -47,4 +47,25 @@ class GoodsController extends ApiController
 
         $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
     }
+
+    #分类
+    function categoryAction(){
+        $url = "http://v2.api.haodanku.com/super_classify/apikey/allfree";
+        $json = file_get_contents($url);
+        //print_r($json);die;
+        $ret_data = json_decode($json,true)['general_classify'];
+        $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
+    }
+
+    #热搜词
+    function keywordAction(){
+        $url = "http://v2.api.haodanku.com/hot_key/apikey/allfree";
+        $json = file_get_contents($url);
+        //print_r($json);die;
+        $ret_data = json_decode($json,true)['data'];
+        $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
+    }
+
+
+
 }
