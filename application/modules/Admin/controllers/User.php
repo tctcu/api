@@ -6,4 +6,8 @@ class UserController extends AdminController
 	{
 		parent::init();
 	}
+
+	function indexAction(){
+		echo 'user';die;
+	}
 }

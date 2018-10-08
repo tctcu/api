@@ -7,4 +7,8 @@ class StatController extends AdminController
 		parent::init();
 	}
 
+	function indexAction(){
+		echo 'stat';die;
+	}
+
 }
