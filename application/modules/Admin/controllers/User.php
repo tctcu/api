@@ -8,6 +8,5 @@ class UserController extends AdminController
 	}
 
 	function indexAction(){
-		echo 'user';die;
 	}
 }

@@ -8,7 +8,6 @@ class StatController extends AdminController
 	}
 
 	function indexAction(){
-		echo 'stat';die;
 	}
 
 }
