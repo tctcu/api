@@ -11,7 +11,13 @@ class ShopController extends AdminController
 
     }
 
+    #广告列表
     function bannerAction(){
-        echo 'shop';die;
+
+    }
+
+    #新增/编辑广告
+    function createBannerAction(){
+
     }
 }

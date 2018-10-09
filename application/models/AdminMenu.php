@@ -13,7 +13,7 @@
 							'style' => 'glyphicon glyphicon-chevron-right'
 						),
 						'banner' => array(
-							'title' => 'banner列表',
+							'title' => '广告列表',
 							'href' => '/admin/shop/banner/',
 							'style' => 'glyphicon glyphicon-chevron-right'
 						),
