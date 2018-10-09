@@ -27,7 +27,7 @@ class ShopController extends AdminController
         $this->_view->page = $page;
         $this->_view->pager = new System_Page($this->base_url, $condition, $pagination);
 
-        $this->_layout->meta_title = '后台用户列表';
+        $this->_layout->meta_title = '广告列表';
     }
 
     #新增/编辑广告
@@ -41,23 +41,21 @@ class ShopController extends AdminController
         }
 
         if($this->getRequest()->isPost()) {
-            $title = !empty($_REQUEST['title']) ? trim($_REQUEST['title']) : '';
-            $author = !empty($_REQUEST['author']) ? trim($_REQUEST['author']) : '';
-            $press = !empty($_REQUEST['press']) ? trim($_REQUEST['press']) : '';
-            $version = !empty($_REQUEST['version']) ? trim($_REQUEST['version']) : '';
-            $category = !empty($_REQUEST['category']) ? trim($_REQUEST['category']) : '';
-            $price = !empty($_REQUEST['price']) ? trim($_REQUEST['price']) : '';
-            $type = !empty($_REQUEST['type']) ? intval($_REQUEST['type']) : 1;
-
             $data = array(
-                'title' => $title,
-                'author' => $author,
-                'press' => $press,
-                'version' => $version,
-                'category' => $category,
-                'type' => $type,
-                'price' => $price,
+                'position' => trim($_REQUEST['position']),
+                'type' => intval($_REQUEST['type']),
+                'goto' => trim($_REQUEST['goto'])
             );
+
+            if (!empty($_FILES['upload_file']) && $_FILES['upload_file']['error'] == 0) {
+                $common_model = new CommonModel();
+                $pic = $common_model->addPic($upload_file = 'upload_file');
+                if (!empty($pic)) {
+                    $data['pic'] = $pic;
+                } else {
+                    echo '上传失败';die;
+                }
+            }
 
             if($info['id']) {
                 $book_model->updateData($data, $info['id']);
@@ -65,13 +63,13 @@ class ShopController extends AdminController
                 $book_model->addData($data);
             }
 
-            $this->set_flush_message("编辑/添加活动成功");
-            $this->redirect('/admin/book/index/');
+            $this->set_flush_message("编辑/添加广告成功");
+            $this->redirect('/admin/shop/banner/');
             return FALSE;
         }
 
         $this->_view->info = $info;
-        $this->_layout->meta_title = '编辑/添加书籍';
+        $this->_layout->meta_title = '编辑/添加广告';
 
     }
 }

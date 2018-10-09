@@ -18,12 +18,12 @@ class BannerModel extends MysqlModel {
     }
 
     #更新
-    function updateData($data, $uid){
-        if(empty($data) || empty($uid)){
+    function updateData($data, $id){
+        if(empty($data) || empty($id)){
             return false;
         }
         $data['updated_at'] = time();
-        return $this->update($data,"uid = {$uid}");
+        return $this->update($data,"id = {$id}");
     }
 
     #查找单条信息

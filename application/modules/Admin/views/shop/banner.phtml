@@ -12,17 +12,15 @@
 
             <div class="panel-body">
                 <table class="table table-bordered table-striped">
-                    <tr><td>ID</td><td>姓名</td><td>手机号</td><td>更新日期</td><td>管理</td></tr>
+                    <tr><td>ID</td><td>图片</td><td>位置</td><td>更新日期</td><td>管理</td></tr>
                     <?php foreach ($show_list as $row){ ?>
                         <tr>
-                            <td><?php echo $row['uid'];?></td>
-                            <td><?php echo $row['name']?></td>
-                            <td><?php echo $row['mobile']?></td>
+                            <td><?php echo $row['id'];?></td>
+                            <td><img src="<?php echo CommonModel::IMAGE_URL . $row['pic']?>" width="200" height="100"> </td>
+                            <td><?php echo $row['position']?></td>
                             <td><?php echo date('Y-m-d H:i',$row['updated_at']);?></td>
                             <td>
-                                <a class="btn btn-info btn-xs" href="/admin/adminuser/role/?uid=<?php echo $row['uid']?>"><i class="glyphicon glyphicon-edit"> </i> 设置权限</a>
-                                <a class="btn btn-success btn-xs" href="/admin/adminuser/create/?uid=<?php echo $row['uid']?>"><i class="glyphicon glyphicon-edit"> </i> 编辑</a>
-                                <a class="btn btn-danger btn-xs" onclick="delAlert('/admin/adminuser/reset/?uid=<?php echo $row['uid']?>')"><i class="glyphicon glyphicon-edit"> </i> 重置密码</a>
+                                <a class="btn btn-success btn-xs" href="/admin/shop/createbanner?id=<?php echo $row['id']?>"><i class="glyphicon glyphicon-edit"> </i> 编辑</a>
                             </td>
                         </tr>
                     <?php } ?>
