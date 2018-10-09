@@ -93,7 +93,25 @@ class AuthController extends ApiController
 
     #banner 广告位
     function bannerAction(){
-
+        $admin_user_model = new BannerModel();
+        $page =1;
+        $page_size =20;
+        $condition = [
+            'position' => 'banner',
+        ];
+        $show_list = $admin_user_model->getListData($page,$page_size,$condition);
+        $banner = [];
+        foreach($show_list as $val){
+            $banner[] = [
+                'pic' => CommonModel::IMAGE_URL . $val['pic'],
+                'type' => $val['type'],
+                'goto' => $val['goto'],
+            ];
+        }
+        $data = [
+            'banner' => $banner,
+        ];
+        $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $data);
     }
 
 }
