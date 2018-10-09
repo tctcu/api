@@ -45,10 +45,6 @@ class BannerModel extends MysqlModel {
             $sql .= " and id={$condition['id']} ";
         }
 
-        if(!empty($condition['mobile'])){
-            $sql .= " and mobile={$condition['mobile']} ";
-        }
-
         $sql .= " order by id desc ";
 
         $start = ($page -1 ) * $page_size;
@@ -65,10 +61,6 @@ class BannerModel extends MysqlModel {
         $sql = " select count(*) as num from {$this->_name} where 1 ";
         if(!empty($condition['id'])){
             $sql .= " and id={$condition['id']} ";
-        }
-
-        if(!empty($condition['mobile'])){
-            $sql .= " and mobile={$condition['mobile']} ";
         }
 
         $result = $this->_db->fetchRow($sql);
