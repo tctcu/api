@@ -1,9 +1,9 @@
-<h2>添加后台用户</h2>
+<h2>增加/编辑广告</h2>
 <div class="col-md-12" style="padding-left:0px;">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <span class="app-panel-title" >填写用户的基本资料</span>
-            <a class="btn btn-sm btn-success app-panel-btn" href="/admin/adminuser/index/"> <i class="glyphicon glyphicon-chevron-right"></i> 返回用户列表</a>
+            <span class="app-panel-title" >增加/编辑广告</span>
+            <a class="btn btn-sm btn-success app-panel-btn" href="/admin/shop/banner/"> <i class="glyphicon glyphicon-chevron-right"></i> 返回广告列表</a>
             <div style="clear:both;"></div>
         </div>
 
@@ -14,7 +14,7 @@
                     <?php echo htmlspecialchars($message)?>
                 </div>
             <?php endif;?>
-            <form action="/admin/adminuser/create" method="post" role="form" id="user-form">
+            <form action="/admin/shop/createbanner" method="post" role="form" id="user-form">
 
                 <?php if(!empty($info)):?>
                     <input type="hidden" name="uid" value="<?php echo $info['uid']?>" />
