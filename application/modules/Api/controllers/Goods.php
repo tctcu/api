@@ -71,7 +71,7 @@ class GoodsController extends ApiController
         foreach($ret_data as &$val){
             $val['color'] = '#212121';
         }
-        $ret_data[0]['keyword'] = "\xF0\x9F\x94\xA5".$ret_data[0]['keyword'];
+        $ret_data[0]['keyword'] = "🔥".$ret_data[0]['keyword'];
         $ret_data[0]['color'] = '#FF3030';
         $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
     }
