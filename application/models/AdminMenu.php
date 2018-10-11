@@ -1,20 +1,20 @@
 <?php class AdminMenuModel {
 
 	public  $menu_list = array(
-			'book' => array(
-				'book' => array(
-					'title' => '书籍管理',
+			'shop' => array(
+				'shop' => array(
+					'title' => '商品管理',
 					'style' => 'glyphicon glyphicon-list-alt',
-					'href' => '/admin/book/index',
+					'href' => '/admin/shop/index',
 					'childs' => array(
 						'index' => array(
-							'title' => '书籍列表',
-							'href' => '/admin/book/index/',
+							'title' => '商品列表',
+							'href' => '/admin/shop/index/',
 							'style' => 'glyphicon glyphicon-chevron-right'
 						),
-						'borrowlist' => array(
-							'title' => '书籍借阅记录列表',
-							'href' => '/admin/book/borrowlist/',
+						'banner' => array(
+							'title' => '广告列表',
+							'href' => '/admin/shop/banner/',
 							'style' => 'glyphicon glyphicon-chevron-right'
 						),
 
@@ -44,16 +44,10 @@
 					'href' => '/admin/stat/index',
 					'childs' => array(
 						'index' => array(
-							'title' => '书籍出借排行',
+							'title' => '统计列表',
 							'href' => '/admin/stat/index/',
 							'style' => 'glyphicon glyphicon-chevron-right'
 						),
-						'pledge' => array(
-							'title' => '押金记录',
-							'href' => '/admin/stat/pledge/',
-							'style' => 'glyphicon glyphicon-chevron-right'
-						),
-
 
 					)
 				),
@@ -69,8 +63,6 @@
 							'href' => '/admin/adminuser/index/',
 							'style' => 'glyphicon glyphicon-chevron-right'
 						),
-
-
 					)
 				),
 
