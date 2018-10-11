@@ -67,12 +67,11 @@ class GoodsController extends ApiController
     function keywordAction(){
         $url = "http://v2.api.haodanku.com/hot_key/apikey/allfree";
         $json = file_get_contents($url);
-        //print_r($json);die;
         $ret_data = array_slice( json_decode($json,true)['data'],0,20);
         foreach($ret_data as &$val){
             $val['color'] = '#212121';
         }
-        $ret_data[0]['keyword'] = '\ud83d\udd25'.$ret_data[0]['keyword'];
+        $ret_data[0]['keyword'] = "\xF0\x9F\x94\xA5".$ret_data[0]['keyword'];
         $ret_data[0]['color'] = '#FF3030';
         $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
     }
