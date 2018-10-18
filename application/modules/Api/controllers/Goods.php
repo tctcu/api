@@ -73,10 +73,7 @@ class GoodsController extends ApiController
             $val['emoji'] = '';
             $val['color'] = '#212121';
         }
-        $ret_data[0]['emoji'] = "🔥";
-        $ret_data[1]['emoji'] = "\xF0\x9F\x94\xA5";
-        $ret_data[2]['emoji'] = "\ud83d\udd25";
-        $ret_data[3]['emoji'] = "\u{1F525}";
+        $ret_data[0]['emoji'] = "\xF0\x9F\x94\xA5";
         $ret_data[0]['color'] = '#FF3030';
         $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
     }
