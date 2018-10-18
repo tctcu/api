@@ -36,6 +36,7 @@ class GoodsController extends ApiController
                 'couponexplain' => $val['couponexplain'],
                 'couponstarttime' => $val['couponstarttime'],
                 'couponendtime' => $val['couponendtime'],
+                'shoptype' => $val['shoptype'],
 //                'taobao_image' => explode(',' ,$val['taobao_image']),
             );
         }
@@ -69,9 +70,13 @@ class GoodsController extends ApiController
         $json = file_get_contents($url);
         $ret_data = array_slice( json_decode($json,true)['data'],0,20);
         foreach($ret_data as &$val){
+            $val['emoji'] = '';
             $val['color'] = '#212121';
         }
-        $ret_data[0]['keyword'] = "🔥".$ret_data[0]['keyword'];
+        $ret_data[0]['emoji'] = "🔥";
+        $ret_data[1]['emoji'] = "\xF0\x9F\x94\xA5";
+        $ret_data[2]['emoji'] = "\ud83d\udd25";
+        $ret_data[3]['emoji'] = "\u{1F525}";
         $ret_data[0]['color'] = '#FF3030';
         $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
     }
@@ -98,6 +103,7 @@ class GoodsController extends ApiController
                 'couponexplain' => $val['couponexplain'],
                 'couponstarttime' => $val['couponstarttime'],
                 'couponendtime' => $val['couponendtime'],
+                'shoptype' => $val['shoptype'],
 //                'taobao_image' => explode(',' ,$val['taobao_image']),
             );
         }
@@ -105,4 +111,44 @@ class GoodsController extends ApiController
     }
 
 
+
+    #单品关联推荐
+    function recommendAction(){
+        $itemid = intval($_REQUEST['itemid']);
+        $url = "http://v2.api.haodanku.com/get_similar_info/apikey/allfree/itemid/".$itemid;
+        $json = file_get_contents($url);
+        $ret_data = json_decode($json,true);
+
+        $data = array();
+        foreach($ret_data['data'] as $val){
+            $data['list'][] = array(
+                'itemid' => $val['itemid'],
+                'itemshorttitle' => $val['itemshorttitle'],
+                'itemdesc' => $val['itemdesc'],
+                'itemprice' => $val['itemprice'],
+                'itemsale' => $val['itemsale'],
+                'itempic' => $val['itempic'],
+                'itemendprice' => $val['itemendprice'],
+                'url' => 'http://uland.taobao.com/coupon/edetail?activityId='.$val['activityid'].'&itemId='.$val['itemid'].'&src=qmmf_sqrb&mt=1&pid=mm_116356778_18618211_65740777',
+                'couponmoney' => $val['couponmoney'],
+                'couponexplain' => $val['couponexplain'],
+                'couponstarttime' => $val['couponstarttime'],
+                'couponendtime' => $val['couponendtime'],
+                'shoptype' => $val['shoptype'],
+//                'taobao_image' => explode(',' ,$val['taobao_image']),
+            );
+        }
+        $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $data);
+    }
+
+    function testAction(){
+        $contract_course_data['total_used_course_hour'] = 34.58;
+        $strategy['actual_period'] = '34.58';
+        var_dump($contract_course_data['total_used_course_hour'] * 100);//die;
+        var_dump($strategy['actual_period'] * 100);die;
+        if($contract_course_data['total_used_course_hour'] * 100 <> $strategy['actual_period'] * 100){
+            echo '1';die;
+        }
+        echo '2';die;
+    }
 }
