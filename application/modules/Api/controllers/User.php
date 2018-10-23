@@ -42,7 +42,7 @@ class UserController extends ApiController
 
         if($mobile && $password && $device_type && $device) {
             $salt = rand(1000, 9999);
-            $data = array(
+            $insert = array(
                 'mobile' => $mobile,
                 'device' => $device,
                 'device_type' => $device_type,
@@ -51,9 +51,12 @@ class UserController extends ApiController
             );
 
             $user_model = new UserModel();
-            $user_model->addData($data);
-
-            $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG);
+            $user_model->addData($insert);
+            $data = array(
+                'mobile' => $insert['mobile'],
+                'token' => $insert['password'],
+            );
+            $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $data);
         }
 
         $this->responseJson('10006');
