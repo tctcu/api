@@ -41,6 +41,12 @@ class UserController extends ApiController
         $device = trim($_REQUEST['device']);
 
         if($mobile && $password && $device_type && $device) {
+            $user_model = new UserModel();
+            $user_info = $user_model->getDataByMobile($mobile);
+            if ($user_info) {
+                $this->responseJson('10006', '用户已存在');
+            }
+
             $salt = rand(1000, 9999);
             $insert = array(
                 'mobile' => $mobile,
@@ -50,7 +56,6 @@ class UserController extends ApiController
                 'password' => md5(md5($password) . $salt),
             );
 
-            $user_model = new UserModel();
             $user_model->addData($insert);
             $data = array(
                 'mobile' => $insert['mobile'],
