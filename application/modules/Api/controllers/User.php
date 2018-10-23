@@ -58,7 +58,7 @@ class UserController extends ApiController
 
             $user_model->addData($insert);
             $data = array(
-                'mobile' => $insert['mobile'],
+                'mobile' => $insert['mobile'].'',
                 'token' => $insert['password'],
             );
             $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $data);
