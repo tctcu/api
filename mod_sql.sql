@@ -74,4 +74,16 @@ CREATE TABLE `banner` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='banner广告表';
 
+CREATE TABLE `user` (
+  `uid` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `mobile` varchar(20) NOT NULL DEFAULT '' COMMENT '手机号',
+  `password` varchar(64) NOT NULL DEFAULT '' COMMENT '密码',
+  `salt` char(4) NOT NULL DEFAULT '' COMMENT '盐',
+  `device` varchar(64) NOT NULL DEFAULT ''  COMMENT '设备号',
+  `device_type` tinyint(4) unsigned NOT NULL DEFAULT '0' COMMENT '设备类型 1-IOS 2-安卓',
+  `status` tinyint(4) unsigned NOT NULL DEFAULT '1' COMMENT '状态 2-禁止登录',
+  `created_at` int(11) unsigned NOT NULL COMMENT '创建时间戳',
+  `updated_at` int(11) unsigned NOT NULL COMMENT '更新时间戳',
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
 

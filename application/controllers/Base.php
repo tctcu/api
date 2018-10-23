@@ -74,7 +74,7 @@ abstract class BaseController extends Yaf_Controller_Abstract{
         if(strpos($name, '.')) { // 指定参数来源
             list($method, $name) =   explode('.', $name, 2);
         }else{ // 默认为自动判断
-            $method =   'param';
+            $method = 'param';
         }
 
         switch(strtolower($method)) {

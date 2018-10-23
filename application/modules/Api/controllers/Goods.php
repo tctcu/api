@@ -49,10 +49,33 @@ class GoodsController extends ApiController
         $itemid = intval($_REQUEST['itemid']);
         $url = "http://v2.api.haodanku.com/item_detail/apikey/allfree/itemid/".$itemid;
         $json = file_get_contents($url);
-        $ret_data = json_decode($json,true)['data'];
-        $ret_data['taobao_image'] = explode(',' ,$ret_data['taobao_image']);
+        $val = json_decode($json,true)['data'];
 
-        $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $ret_data);
+        $data = array(
+            'itemid' => $val['itemid'],
+            'itemshorttitle' => $val['itemshorttitle'],
+            'itemdesc' => $val['itemdesc'],
+            'itemprice' => $val['itemprice'],
+            'itemsale' => $val['itemsale'],
+            'itempic' => $val['itempic'].'_310x310.jpg',
+            'itemendprice' => $val['itemendprice'],
+            'url' => 'http://uland.taobao.com/coupon/edetail?activityId='.$val['activityid'].'&itemId='.$val['itemid'].'&src=qmmf_sqrb&mt=1&pid=mm_116356778_18618211_65740777',
+            'couponnum' => $val['couponnum'],
+            'couponreceive2' => $val['couponreceive2'],
+            'couponmoney' => $val['couponmoney'],
+            'couponexplain' => $val['couponexplain'],
+            'couponstarttime' => $val['couponstarttime'],
+            'couponendtime' => $val['couponendtime'],
+            'shoptype' => $val['shoptype'],
+            'taobao_image' => explode(',' ,$val['taobao_image']),
+            'itempic_copy' => 'http://img.haodanku.com/'.$val['itempic_copy'].'-600',
+            'fqcat' => $val['fqcat'],
+            'sellernick' => $val['sellernick'],
+            'discount' => $val['discount'],
+            'activity_type' => $val['activity_type'],
+            'video_url' => $val['videoid']? 'http://cloud.video.taobao.com/play/u/1/p/1/e/6/t/1/'.$val['videoid'].'mp4' : '',
+        );
+        $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $data);
     }
 
     #分类
