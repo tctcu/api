@@ -74,6 +74,12 @@ class GoodsController extends ApiController
             'discount' => $val['discount'],
             'activity_type' => $val['activity_type'],
             'video_url' => $val['videoid']? 'http://cloud.video.taobao.com/play/u/1/p/1/e/6/t/1/'.$val['videoid'].'mp4' : '',
+            'share' => array(
+                'share_title' => $val['itemshorttitle'].'  领券后￥'.$val['itemprice'],
+                'share_pic' =>  'http://img.haodanku.com/'.$val['itempic_copy'].'-100',
+                'share_url' => 'http://uland.taobao.com/coupon/edetail?activityId='.$val['activityid'].'&itemId='.$val['itemid'].'&src=qmmf_sqrb&mt=1&pid=mm_116356778_18618211_65740777'
+            ),
+
         );
         $this->responseJson(self::SUCCESS_CODE, self::SUCCESS_MSG, $data);
     }
