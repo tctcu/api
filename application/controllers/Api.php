@@ -14,8 +14,12 @@ abstract class ApiController extends BaseController
     function init(){
         parent::init();
         header('content-type:text/html;charset=utf-8');
+<<<<<<< HEAD
         //解密
         //$this->decryptRequest();
+=======
+
+>>>>>>> c499183afccb0b816425c25eba9fd6438d193051
         $this->check_access_token();
     }
 
@@ -67,7 +71,11 @@ abstract class ApiController extends BaseController
         $params = self::I('params', '');
         $key = self::I('key', '');
 
+<<<<<<< HEAD
         if(empty($params) || empty($key) ){
+=======
+        if( empty($params) || empty($key) ){
+>>>>>>> c499183afccb0b816425c25eba9fd6438d193051
             $this->responseJson(10009);
         }
 
