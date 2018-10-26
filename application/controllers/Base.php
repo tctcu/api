@@ -75,10 +75,14 @@ abstract class BaseController extends Yaf_Controller_Abstract{
             list($method, $name) =   explode('.', $name, 2);
         }else{ // 默认为自动判断
 <<<<<<< HEAD
+<<<<<<< HEAD
             $method = 'param';
 =======
             $method =   'param';
 >>>>>>> c499183afccb0b816425c25eba9fd6438d193051
+=======
+            $method = 'param';
+>>>>>>> 7a93b2c161831530b05e6f929dbe9c9cbaac4086
         }
 
         switch(strtolower($method)) {
