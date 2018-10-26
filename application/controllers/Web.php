@@ -9,7 +9,9 @@ class WebController extends Yaf_Controller_Abstract
     function protocolAction(){}
 
     #官网
-    function pcAction(){}
+    function pcAction(){
+        echo 'test';
+    }
 
 
 }
