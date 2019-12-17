@@ -1,27 +1,6 @@
 <?php class AdminMenuModel {
 
 	public  $menu_list = array(
-			'shop' => array(
-				'shop' => array(
-					'title' => '商品管理',
-					'style' => 'glyphicon glyphicon-list-alt',
-					'href' => '/admin/shop/index',
-					'childs' => array(
-						'index' => array(
-							'title' => '商品列表',
-							'href' => '/admin/shop/index/',
-							'style' => 'glyphicon glyphicon-chevron-right'
-						),
-						'banner' => array(
-							'title' => '广告列表',
-							'href' => '/admin/shop/banner/',
-							'style' => 'glyphicon glyphicon-chevron-right'
-						),
-
-					)
-				),
-
-			),
 			'user' => array(
 				'user' => array(
 					'title' => '用户管理',

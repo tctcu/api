@@ -12,11 +12,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
         Yaf_Registry::set("config", $config);
     }
 
-    #注册memcache插件
-    public function _initPlugin(Yaf_Dispatcher $dispatcher){
-        $dispatcher->registerPlugin(new MemcachedPlugin());
-    }
-
     #自动加载第3方类库
     public function _initIncludePath(){
         set_include_path(get_include_path() . PATH_SEPARATOR . $this->_config->application->library);

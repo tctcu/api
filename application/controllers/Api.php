@@ -13,18 +13,39 @@ abstract class ApiController extends BaseController
 
     function init(){
         parent::init();
-        header('content-type:text/html;charset=utf-8');
-<<<<<<< HEAD
-<<<<<<< HEAD
         //解密
-        //$this->decryptRequest();
-=======
+        if(1==2) {
+            $data = !empty($_REQUEST['data']) ? addslashes(htmlspecialchars(trim(urldecode($_REQUEST['data'])))) : "";
 
->>>>>>> c499183afccb0b816425c25eba9fd6438d193051
-=======
-        //解密
-        //$this->decryptRequest();
->>>>>>> 7a93b2c161831530b05e6f929dbe9c9cbaac4086
+            $params = !empty($_REQUEST['params']) ? addslashes(htmlspecialchars(trim(urldecode($_REQUEST['params'])))) : "";
+
+            #rsa解密
+            $rsa_model = new Rsa();
+            $key_time = $rsa_model->decrypt($params);   //得到随机字符串和10位时间戳
+
+            if (empty($key_time)) {  //rsa解码错误
+                $code = 10025;
+                $msg = $this->_error_codes->system_errors[$code];
+                $this->responseJson($code, $msg);
+                exit;
+            }
+
+            $key = substr($key_time, 0, 16);  //截取前16位随机参数
+            $time = substr($key_time, -10, 10);  //截取后10位时间戳
+
+//				if(time() - $time > 60*2){  //加密时间戳两分钟内有效
+//					$code = 10021;
+//					$msg = $this->_error_codes->system_errors[$code];
+//					$this->echo_message($msg,$code);
+//					exit;
+//				}
+
+            #进行ase解密，128位，测ecb模式
+            $data = $this->initParams($data, $key);  //通过随机参数aes解密出来真正的参数
+            $_REQUEST = $data;
+        }
+        header('content-type:text/html;charset=utf-8');
+
         $this->check_access_token();
     }
 
@@ -33,36 +54,25 @@ abstract class ApiController extends BaseController
         $params = $this->get_params();
         $controller_name = strtolower($this->getRequest()->controller);
 
-        #是否需要登录，即用access_token换取uid
-        $request_api_is_require_logined = 0;
-
+        #是否需要登录
+        $require_login = false;
         if ($controller_name == 'my') {
-            $request_api_is_require_logined = 1;
+            $require_login = true;
         }
-        if($request_api_is_require_logined == 1  ){
-            if(!isset($params['access_token']) && empty($params['access_token'])){
-                $code = 10022;
-                $msg = $this->error_codes->system_errors[$code];
-                $this->responseJson($code, $msg);
-                exit;
+
+        if($require_login ){
+            if(!isset($params['token']) && empty($params['token'])){
+                $this->responseJson('10008');
             }
 
-            $access_token = trim($params['access_token']);
-            $access_token_obj = new AccessTokenModel();
+            $token = trim($params['token']);
+            $user_model = new UserModel();
+            $user_info = $user_model->getDataByUnionId($token);
+            $this->uid = $user_info['uid'];
 
-            try{
-                $uid = (int)$access_token_obj->getUidbyAccessToken($access_token);
-            }catch(Exception $ex){
-                exit($ex->getMessage());
+            if(empty($this->uid)){
+                $this->responseJson('10008');
             }
-
-            #用户的accesstoken是否失效
-            if($uid == 0){
-                $code = 10023;
-                $this->responseJson($code);
-            }
-
-            $this->uid = $uid;
         }
     }
 
@@ -76,15 +86,7 @@ abstract class ApiController extends BaseController
         $params = self::I('params', '');
         $key = self::I('key', '');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if(empty($params) || empty($key) ){
-=======
-        if( empty($params) || empty($key) ){
->>>>>>> c499183afccb0b816425c25eba9fd6438d193051
-=======
-        if(empty($params) || empty($key) ){
->>>>>>> 7a93b2c161831530b05e6f929dbe9c9cbaac4086
             $this->responseJson(10009);
         }
 
@@ -135,6 +137,27 @@ abstract class ApiController extends BaseController
     #get params
     private function get_params(){
         return $_REQUEST;
+    }
+
+
+    function get_curl($url){
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        $result_json = curl_exec($ch);
+        curl_close($ch);
+        return  json_decode($result_json, true);
+    }
+    function post_curl($url,$data){
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        $result_json = curl_exec($ch);
+        curl_close($ch);
+        return  json_decode($result_json, true);
     }
 
 

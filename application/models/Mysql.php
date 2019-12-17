@@ -9,9 +9,7 @@ Abstract class MysqlModel extends Zend_Db_Table_Abstract{
 
 	public function __construct()
 	{
-
 		$this->adapter = Yaf_Registry::get('mysql_cluster');
-		$this->memcached = Yaf_Registry::get('memcached');
 		parent::__construct($this->adapter->getAdapter(self::MYSQL_SLAVE));
 	}
 
@@ -58,25 +56,6 @@ Abstract class MysqlModel extends Zend_Db_Table_Abstract{
 
 
 	/*
-     * memcache
-     */
-	function getMemcachedData($key)
-	{
-		return $this->memcached->get($key);
-	}
-	function setMemcachedData($key, $data, $expire = 0)
-	{
-		if (empty($expire)) {
-			$expire = time() + 3600;
-		}
-		return $this->memcached->set($key, $data, $expire);
-	}
-	function deleteMemcached($key)
-	{
-		$this->memcached->delete($key);
-	}
-
-	/*
      * 事务
      */
 	function beginTransaction()
@@ -100,7 +79,7 @@ Abstract class MysqlModel extends Zend_Db_Table_Abstract{
 	function logException($str)
 	{
 		if ($this->log) {
-			$fp = fopen('/data/bak/log/db_exception.log', 'a');
+			$fp = fopen('/opt/db_exception.log', 'a');
 			if ($fp) {
 				$str = date("Y-m-d H:i:s", time()) . '  ==> ' . $str;
 				fwrite($fp, $str . "\n");
