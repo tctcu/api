@@ -5,8 +5,8 @@ ini_set('display_errors', 1);
 
 function dsn()
 {
-    $dsn = "mysql:host=localhost;dbname=devshop";
+    $dsn = "mysql:host=localhost;dbname=demo";
     $dbh = new PDO($dsn, 'root', 'mysql');
-    $dbh->query('set names utf8;');
+    $dbh->query('set names utf8mb4;');
     return $dbh;
 }
