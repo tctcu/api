@@ -1,5 +1,7 @@
 <?php
-class ErrorCodeModel{
+
+class ErrorCodeModel
+{
 
     public $system_errors = null;
 

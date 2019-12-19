@@ -1,13 +1,15 @@
 <?php
+
 class StatController extends AdminController
 {
 
-	function init()
-	{
-		parent::init();
-	}
+    function init()
+    {
+        parent::init();
+    }
 
-	function indexAction(){
-	}
+    function indexAction()
+    {
+    }
 
 }

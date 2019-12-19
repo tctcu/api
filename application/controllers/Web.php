@@ -1,7 +1,9 @@
 <?php
+
 class WebController extends Yaf_Controller_Abstract
 {
-    function init(){
+    function init()
+    {
         header('content-type:text/html;charset=utf-8');
     }
 

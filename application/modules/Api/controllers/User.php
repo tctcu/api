@@ -1,4 +1,5 @@
 <?php
+
 class UserController extends ApiController
 {
 
@@ -7,7 +8,8 @@ class UserController extends ApiController
         parent::init();
     }
 
-    function indexAction(){
+    function indexAction()
+    {
         $data = [
             'test'
         ];

@@ -1,4 +1,5 @@
 <?php
+
 class IndexController extends Yaf_Controller_Abstract
 {
     function init()
